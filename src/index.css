@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #1a1a1a;
+  --color-electric-blue: #007bff;
+  --color-neon-green: #00ff80;
+
+  --font-sans: 'Inter', 'Montserrat', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-charcoal);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-electric-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-blue-500/30;
+  }
+
+  /* CRT Scanline Effect */
+  .crt-overlay {
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg,
+        rgba(255, 0, 0, 0.06),
+        rgba(0, 255, 0, 0.02),
+        rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+  .terminal-window {
+    @apply relative overflow-hidden;
+  }
+
+  .terminal-window::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 0.027906;
+    }
+
+    5% {
+      opacity: 0.048949;
+    }
+
+    10% {
+      opacity: 0.023069;
+    }
+
+    15% {
+      opacity: 0.070246;
+    }
+
+    20% {
+      opacity: 0.038128;
+    }
+
+    25% {
+      opacity: 0.061791;
+    }
+
+    30% {
+      opacity: 0.040081;
+    }
+
+    35% {
+      opacity: 0.025618;
+    }
+
+    40% {
+      opacity: 0.062949;
+    }
+
+    45% {
+      opacity: 0.028871;
+    }
+
+    50% {
+      opacity: 0.043603;
+    }
+
+    55% {
+      opacity: 0.08726;
+    }
+
+    60% {
+      opacity: 0.064135;
+    }
+
+    65% {
+      opacity: 0.043292;
+    }
+
+    70% {
+      opacity: 0.020313;
+    }
+
+    75% {
+      opacity: 0.024784;
+    }
+
+    80% {
+      opacity: 0.060454;
+    }
+
+    85% {
+      opacity: 0.072093;
+    }
+
+    90% {
+      opacity: 0.031097;
+    }
+
+    95% {
+      opacity: 0.064321;
+    }
+
+    100% {
+      opacity: 0.024387;
+    }
+  }
+}
