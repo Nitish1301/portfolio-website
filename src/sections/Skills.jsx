@@ -27,10 +27,10 @@ const Skills = () => {
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="text-3xl md:text-4xl font-bold mb-16 text-center font-montserrat text-gray-900 dark:text-white"
+                    className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-center font-montserrat text-gray-900 dark:text-white"
                 >
                     Skills & <span className="text-electric-blue">Proficiency</span>
-                    <p className="text-base font-normal text-gray-500 mt-4 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl font-normal text-gray-500 mt-4 max-w-2xl mx-auto">
                         A visual representation of my technical expertise and competitive programming achievements.
                     </p>
                 </motion.h2>
@@ -43,7 +43,7 @@ const Skills = () => {
                         transition={{ delay: 0.1 }}
                         className="bg-gray-50 dark:bg-[#1e1e1e] rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-electric-blue/50 transition-all duration-300"
                     >
-                        <h3 className="text-xl font-bold mb-8 text-center text-gray-900 dark:text-white">DSA Progress</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">DSA Progress</h3>
 
                         <div className="mb-8">
                             <CircularProgress
@@ -67,7 +67,7 @@ const Skills = () => {
                         transition={{ delay: 0.2 }}
                         className="bg-gray-50 dark:bg-[#1e1e1e] rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-electric-blue/50 transition-all duration-300 flex flex-col items-center"
                     >
-                        <h3 className="text-xl font-bold mb-8 text-center text-gray-900 dark:text-white">Front-End Stack</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Front-End Stack</h3>
                         <RadarChart data={frontendData} label="Proficiency Matrix" />
                     </motion.div>
 
@@ -78,7 +78,7 @@ const Skills = () => {
                         transition={{ delay: 0.3 }}
                         className="bg-gray-50 dark:bg-[#1e1e1e] rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-electric-blue/50 transition-all duration-300 flex flex-col items-center"
                     >
-                        <h3 className="text-xl font-bold mb-8 text-center text-gray-900 dark:text-white">Languages & Tools</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Languages & Tools</h3>
                         <RadarChart data={toolsData} label="Proficiency Matrix" />
                     </motion.div>
                 </div>

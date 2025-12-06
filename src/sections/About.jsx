@@ -52,7 +52,7 @@ const About = () => {
                             </div>
 
                             {/* JSON Stats */}
-                            <div className="text-xs md:text-sm font-mono leading-relaxed overflow-x-auto bg-white dark:bg-[#1e1e1e] p-4 rounded border border-gray-200 dark:border-gray-800 transition-colors duration-300">
+                            <div className="text-sm md:text-base font-mono leading-relaxed overflow-x-auto bg-white dark:bg-[#1e1e1e] p-4 rounded border border-gray-200 dark:border-gray-800 transition-colors duration-300">
                                 <span className="text-yellow-600 dark:text-yellow-400">{"{"}</span>
                                 <div className="pl-4">
                                     <span className="text-blue-600 dark:text-sky-300">"core_skills"</span>: <span className="text-yellow-600 dark:text-yellow-400">[</span>
@@ -79,19 +79,19 @@ const About = () => {
                         <div className="w-full md:w-2/3 p-6 md:p-10 bg-white dark:bg-[#1e1e1e] text-gray-800 dark:text-gray-300 transition-colors duration-300">
                             <div className="prose prose-invert max-w-none font-mono">
                                 <div className="mb-8">
-                                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                                         <span className="text-electric-blue dark:text-cyan-400">##</span> About Me
                                     </h2>
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg md:text-xl">
                                         I am a passionate <span className="text-electric-blue dark:text-cyan-400">Full-Stack Developer</span> and Competitive Programmer, currently pursuing my B.Tech in CSE (AI/ML) at LNCT Bhopal.
                                     </p>
                                 </div>
 
                                 <div className="mb-8">
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                                         <span className="text-electric-blue dark:text-cyan-400">###</span> Education & Theoretical Foundation
                                     </h3>
-                                    <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2 marker:text-electric-blue dark:marker:text-cyan-400">
+                                    <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-3 marker:text-electric-blue dark:marker:text-cyan-400 text-lg md:text-xl">
                                         <li>
                                             <span className="text-gray-900 dark:text-white">Coursework:</span> Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems.
                                         </li>
@@ -102,10 +102,10 @@ const About = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                                         <span className="text-electric-blue dark:text-cyan-400">###</span> Engineering Philosophy
                                     </h3>
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg md:text-xl">
                                         Leveraging <span className="text-orange-600 dark:text-orange-300">SOLID principles</span> to build efficient, scalable solutions and creating highly interactive user experiences with modern frameworks. I believe in writing clean, maintainable code that stands the test of time.
                                     </p>
                                 </div>

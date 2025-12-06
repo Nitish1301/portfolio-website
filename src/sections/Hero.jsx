@@ -25,7 +25,7 @@ const Hero = () => {
                     </div>
 
                     {/* Terminal Body */}
-                    <div className="p-6 md:p-8 flex text-sm md:text-base relative z-10">
+                    <div className="p-6 md:p-8 flex text-base md:text-lg relative z-10">
                         {/* Line Numbers */}
                         <div className="flex flex-col text-gray-400 dark:text-gray-600 select-none pr-4 md:pr-6 text-right border-r border-gray-200 dark:border-gray-800 mr-4 md:mr-6 font-mono transition-colors duration-300">
                             {Array.from({ length: 15 }, (_, i) => (
@@ -41,7 +41,7 @@ const Hero = () => {
                             </div>
 
                             <div className="mb-4">
-                                <span className="text-gray-900 dark:text-white text-xl md:text-3xl font-bold flex items-center gap-2 transition-colors duration-300">
+                                <span className="text-gray-900 dark:text-white text-2xl md:text-4xl lg:text-5xl font-bold flex items-center gap-2 transition-colors duration-300">
                                     I am <GlitchText text="Nitish Gupta" />
                                     <motion.span
                                         animate={{ opacity: [0, 1, 0] }}
@@ -51,7 +51,7 @@ const Hero = () => {
                                 </span>
                             </div>
 
-                            <div className="mb-8 font-mono text-sm md:text-base overflow-x-auto">
+                            <div className="mb-8 font-mono text-base md:text-lg overflow-x-auto">
                                 <div className="text-purple-400 dark:text-purple-400">const <span className="text-yellow-600 dark:text-yellow-400">profile</span> = <span className="text-yellow-600 dark:text-yellow-400">{'{'}</span></div>
                                 <div className="pl-4">
                                     <span className="text-blue-600 dark:text-sky-300">role</span>: <span className="text-green-600 dark:text-green-400">"Full-Stack Engineer"</span>,
@@ -69,7 +69,7 @@ const Hero = () => {
                             </div>
 
                             {/* System Status */}
-                            <div className="border-t border-gray-200 dark:border-gray-800 pt-4 mt-8 flex flex-wrap gap-4 text-xs md:text-sm text-gray-500 font-mono transition-colors duration-300">
+                            <div className="border-t border-gray-200 dark:border-gray-800 pt-4 mt-8 flex flex-wrap gap-4 text-sm md:text-base text-gray-500 font-mono transition-colors duration-300">
                                 <span className="flex items-center gap-2">
                                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                                     uptime: 21 years
@@ -88,14 +88,14 @@ const Hero = () => {
                     transition={{ delay: 0.4, duration: 0.5 }}
                     className="mt-12 flex flex-col sm:flex-row justify-center gap-6"
                 >
-                    <a href="#projects" className="group relative px-8 py-3 bg-transparent border border-gray-400 dark:border-gray-600 hover:border-electric-blue dark:hover:border-cyan-400 text-gray-700 dark:text-gray-300 hover:text-electric-blue dark:hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden">
+                    <a href="#projects" className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 dark:border-gray-600 hover:border-electric-blue dark:hover:border-cyan-400 text-gray-700 dark:text-gray-300 hover:text-electric-blue dark:hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden text-base md:text-lg">
                         <span className="relative z-10 flex items-center gap-2">
                             [ &gt; View Projects ]
                         </span>
                         <div className="absolute inset-0 bg-electric-blue/10 dark:bg-cyan-400/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     </a>
 
-                    <a href="#about" className="group relative px-8 py-3 bg-transparent border border-gray-400 dark:border-gray-600 hover:border-electric-blue dark:hover:border-cyan-400 text-gray-700 dark:text-gray-300 hover:text-electric-blue dark:hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden">
+                    <a href="#about" className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 dark:border-gray-600 hover:border-electric-blue dark:hover:border-cyan-400 text-gray-700 dark:text-gray-300 hover:text-electric-blue dark:hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden text-base md:text-lg">
                         <span className="relative z-10 flex items-center gap-2">
                             [ &gt; Read Documentation ]
                         </span>

@@ -32,7 +32,7 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold font-montserrat tracking-tight text-gray-900 dark:text-white">
+                <a href="#" className="text-3xl md:text-4xl font-bold font-montserrat tracking-tight text-gray-900 dark:text-white">
                     NG<span className="text-electric-blue">.</span>
                 </a>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors relative group"
+                            className="text-base md:text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors relative group"
                         >
                             {link.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-electric-blue transition-all duration-300 group-hover:w-full"></span>

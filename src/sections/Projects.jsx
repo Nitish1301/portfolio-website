@@ -61,10 +61,10 @@ const Projects = () => {
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="text-3xl md:text-4xl font-bold mb-12 text-center font-montserrat text-gray-900 dark:text-white"
+                    className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 text-center font-montserrat text-gray-900 dark:text-white"
                 >
                     Featured <span className="text-electric-blue">Projects</span>
-                    <p className="text-sm font-mono text-gray-500 dark:text-gray-400 mt-2 font-normal">
+                    <p className="text-base md:text-lg font-mono text-gray-500 dark:text-gray-400 mt-4 font-normal">
                         A selection of my recent work, showcasing my skills in web development and game design.
                     </p>
                 </motion.h2>
@@ -86,17 +86,17 @@ const Projects = () => {
                                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
                                     <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
                                 </div>
-                                <span className="text-xs font-mono text-gray-600 dark:text-gray-400 truncate ml-2">
+                                <span className="text-sm md:text-base font-mono text-gray-600 dark:text-gray-400 truncate ml-2">
                                     &gt; {project.path}
                                 </span>
                             </div>
 
                             <div className="p-6 flex flex-col h-full">
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-electric-blue transition-colors">
+                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-electric-blue transition-colors">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed flex-grow">
+                                <p className="text-gray-600 dark:text-gray-300 mb-4 text-base md:text-lg leading-relaxed flex-grow">
                                     {project.desc}
                                 </p>
 
@@ -105,15 +105,15 @@ const Projects = () => {
                                     {project.tags.map((tag, tagIndex) => (
                                         <span
                                             key={tagIndex}
-                                            className="px-2.5 py-1 text-xs font-mono bg-gray-100 dark:bg-[#2d2d2d] text-gray-700 dark:text-gray-300 rounded border border-gray-300 dark:border-gray-600 hover:border-electric-blue hover:text-electric-blue transition-colors"
+                                            className="px-3 py-1.5 text-sm md:text-base font-mono bg-gray-100 dark:bg-[#2d2d2d] text-gray-700 dark:text-gray-300 rounded border border-gray-300 dark:border-gray-600 hover:border-electric-blue hover:text-electric-blue transition-colors"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
 
-                                <div className="mb-6 space-y-1 font-mono text-sm">
-                                    <div className="text-gray-900 dark:text-white font-bold mb-2">Technical Specs</div>
+                                <div className="mb-6 space-y-2 font-mono text-base md:text-lg">
+                                    <div className="text-gray-900 dark:text-white font-bold mb-3 text-lg">Technical Specs</div>
                                     <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
                                         <span className="text-electric-blue">&gt;</span>
                                         <span>Stack: {project.specs.stack}</span>
@@ -129,18 +129,18 @@ const Projects = () => {
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors group/link"
+                                        className="flex items-center gap-2 text-base md:text-lg font-mono text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors group/link"
                                     >
-                                        <ExternalLink className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                        <ExternalLink className="w-5 h-5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                                         <span>[ &gt; View Live Demo ]</span>
                                     </a>
                                     <a
                                         href={project.code}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors group/link"
+                                        className="flex items-center gap-2 text-base md:text-lg font-mono text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors group/link"
                                     >
-                                        <Github className="w-4 h-4 group-hover/link:rotate-12 transition-transform" />
+                                        <Github className="w-5 h-5 group-hover/link:rotate-12 transition-transform" />
                                         <span>[ &gt; View Source Code ]</span>
                                     </a>
                                 </div>

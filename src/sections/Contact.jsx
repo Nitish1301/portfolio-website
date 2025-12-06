@@ -32,15 +32,15 @@ const Contact = () => {
                 >
                     {/* Terminal Header */}
                     <div className="bg-gray-200 dark:bg-[#2d2d2d] px-4 py-2 border-b border-gray-300 dark:border-gray-700 flex items-center gap-2">
-                        <span className="text-xs font-mono text-gray-600 dark:text-gray-400">
+                        <span className="text-sm md:text-base font-mono text-gray-600 dark:text-gray-400">
                             &gt; initiate_contact_sequence.sh
                         </span>
                     </div>
 
                     <div className="p-8 md:p-12">
                         {/* Availability Box */}
-                        <div className="mb-8 border border-gray-300 dark:border-gray-700 rounded p-4 font-mono text-sm">
-                            <div className="text-gray-900 dark:text-white mb-2 border-b border-gray-300 dark:border-gray-700 pb-1 inline-block">
+                        <div className="mb-8 border border-gray-300 dark:border-gray-700 rounded p-4 font-mono text-base md:text-lg">
+                            <div className="text-gray-900 dark:text-white mb-2 border-b border-gray-300 dark:border-gray-700 pb-1 inline-block text-lg md:text-xl font-bold">
                                 Availability Data
                             </div>
                             <div className="text-green-600 dark:text-green-400">
@@ -51,9 +51,9 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="space-y-4 font-mono">
-                            <div className="space-y-1">
-                                <label className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                        <form onSubmit={handleSubmit} className="space-y-6 font-mono">
+                            <div className="space-y-2">
+                                <label className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-base md:text-lg">
                                     <span className="text-green-600 dark:text-green-400">root@nitish-portfolio:~$</span>
                                     enter_sender_name:
                                 </label>
@@ -62,13 +62,13 @@ const Contact = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full bg-transparent border-b border-gray-300 dark:border-gray-700 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-electric-blue dark:focus:border-electric-blue transition-colors"
+                                    className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-electric-blue dark:focus:border-electric-blue transition-colors text-lg"
                                     required
                                 />
                             </div>
 
-                            <div className="space-y-1">
-                                <label className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                            <div className="space-y-2">
+                                <label className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-base md:text-lg">
                                     <span className="text-green-600 dark:text-green-400">root@nitish-portfolio:~$</span>
                                     enter_sender_email:
                                 </label>
@@ -77,13 +77,13 @@ const Contact = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full bg-transparent border-b border-gray-300 dark:border-gray-700 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-electric-blue dark:focus:border-electric-blue transition-colors"
+                                    className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-electric-blue dark:focus:border-electric-blue transition-colors text-lg"
                                     required
                                 />
                             </div>
 
-                            <div className="space-y-1">
-                                <label className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+                            <div className="space-y-2">
+                                <label className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-base md:text-lg">
                                     <span className="text-green-600 dark:text-green-400">root@nitish-portfolio:~$</span>
                                     enter_message_payload:
                                 </label>
@@ -92,7 +92,7 @@ const Contact = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows="4"
-                                    className="w-full bg-transparent border-b border-gray-300 dark:border-gray-700 py-2 text-gray-900 dark:text-white focus:outline-none focus:border-electric-blue dark:focus:border-electric-blue transition-colors resize-none"
+                                    className="w-full bg-transparent border-b-2 border-gray-300 dark:border-gray-700 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-electric-blue dark:focus:border-electric-blue transition-colors resize-none text-lg"
                                     required
                                 ></textarea>
                             </div>
@@ -100,7 +100,7 @@ const Contact = () => {
                             <div className="pt-6 flex justify-center">
                                 <button
                                     type="submit"
-                                    className="px-8 py-3 border border-gray-400 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300 text-sm uppercase tracking-wider"
+                                    className="px-8 py-4 border-2 border-gray-400 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300 text-base md:text-lg uppercase tracking-wider font-bold"
                                 >
                                     [ &gt; EXECUTE SEND COMMAND ]
                                 </button>
