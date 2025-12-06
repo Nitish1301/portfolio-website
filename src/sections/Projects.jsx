@@ -1,134 +1,147 @@
 import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
 import ParticleBackground from '../components/ParticleBackground';
 
 const projects = [
     {
-        title: 'Animated Golf Website',
-        path: 'root/projects/animated-golf-website',
-        desc: 'A visually stunning marketing website for a golf brand, featuring advanced scroll animations and interactive elements.',
+        title: 'Typing Master',
+        path: 'root/projects/typing-master',
+        desc: 'A modern typing speed test application built with React that tracks WPM (Words Per Minute), accuracy, and provides real-time feedback to improve typing skills.',
         specs: {
-            stack: 'HTML, GSAP, TailwindCSS',
+            stack: 'React, TailwindCSS',
             performance: '98/100'
         },
-        live: 'https://lnkd.in/gJZNvZ4K',
-        code: '#',
+        live: 'https://nitish1301.github.io/Seventh-Project/',
+        code: 'https://github.com/Nitish1301/Seventh-Project',
+        tags: ['React', 'TailwindCSS', 'JavaScript']
     },
     {
         title: 'Neumorphic Calculator',
         path: 'root/projects/neumorphic-calculator',
-        desc: 'A modern calculator application designed with the soft UI (Neumorphism) aesthetic trend.',
+        desc: 'A beautiful calculator application featuring the modern Neumorphism design trend with soft shadows and elegant UI, providing a smooth user experience.',
         specs: {
             stack: 'HTML, CSS, JavaScript',
-            performance: '100/100'
+            performance: '97/100'
         },
         live: 'https://lnkd.in/ggMfj5QF',
-        code: '#',
-    },
-    {
-        title: 'Typing Master App',
-        path: 'root/projects/typing-master-app',
-        desc: 'A React-based typing speed test application that tracks WPM and accuracy in real-time.',
-        specs: {
-            stack: 'React, TailwindCSS',
-            performance: '94/100'
-        },
-        live: '#',
-        code: '#',
+        code: 'https://lnkd.in/gPv3VRTy',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Neumorphism']
     },
     {
         title: 'Bubble Shooting Game',
         path: 'root/projects/bubble-shooting-game',
-        desc: 'Classic arcade-style game built with HTML5 Canvas, demonstrating game loop logic and collision detection.',
+        desc: 'An engaging arcade-style bubble shooting game built with HTML5 Canvas, featuring smooth animations, collision detection, and addictive gameplay mechanics.',
         specs: {
             stack: 'HTML5 Canvas, Vanilla JS',
-            performance: '96/100'
+            performance: '95/100'
         },
-        live: 'https://lnkd.in/ge9HPV3R',
-        code: '#',
+        live: 'https://nitish1301.github.io/fourth--project/',
+        code: 'https://github.com/Nitish1301/fourth--project',
+        tags: ['HTML5 Canvas', 'Vanilla JS', 'Game Development']
+    },
+    {
+        title: 'Golf Website with GSAP',
+        path: 'root/projects/golf-website-gsap',
+        desc: 'A visually stunning marketing website for a golf brand featuring advanced GSAP scroll animations, smooth transitions, and interactive elements that create an immersive experience.',
+        specs: {
+            stack: 'HTML, CSS, GSAP, JavaScript',
+            performance: '99/100'
+        },
+        live: 'https://nitish1301.github.io/fifth-project/',
+        code: 'https://github.com/Nitish1301/fifth-project',
+        tags: ['GSAP', 'HTML', 'CSS', 'JavaScript', 'Animations']
     },
 ];
 
 const Projects = () => {
     return (
-        <section id="projects" className="relative min-h-screen py-20 bg-[#111] overflow-hidden">
+        <section id="projects" className="relative py-20 bg-gray-100 dark:bg-[#161616] transition-colors duration-300 overflow-hidden">
             <ParticleBackground />
-
-            <div className="section-container relative z-10">
-                <motion.div
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
+                <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-16 text-center"
+                    className="text-3xl md:text-4xl font-bold mb-12 text-center font-montserrat text-gray-900 dark:text-white"
                 >
-                    <a href="#" className="text-2xl font-bold font-montserrat tracking-tight text-white absolute top-0 left-6">
-                        NG<span className="text-electric-blue">.</span>
-                    </a>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-mono">Featured Projects</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto font-mono text-sm">
+                    Featured <span className="text-electric-blue">Projects</span>
+                    <p className="text-sm font-mono text-gray-500 dark:text-gray-400 mt-2 font-normal">
                         A selection of my recent work, showcasing my skills in web development and game design.
                     </p>
-                </motion.div>
+                </motion.h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-[#1e1e1e]/90 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-800 hover:border-cyan-400/50 transition-all duration-300 group shadow-xl hover:shadow-cyan-400/20 hover:-translate-y-2 relative"
+                            whileHover={{ y: -5 }}
+                            className="group relative bg-white dark:bg-[#1e1e1e] rounded-lg overflow-hidden border border-gray-300 dark:border-gray-700 hover:border-electric-blue dark:hover:border-electric-blue transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-electric-blue/20"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                            {/* Card Top Bar */}
-                            <div className="bg-[#2d2d2d] px-4 py-2 border-b border-gray-700 flex items-center">
-                                <span className="text-gray-400 font-mono text-xs md:text-sm truncate">
+                            {/* Terminal Header */}
+                            <div className="bg-gray-200 dark:bg-[#2d2d2d] px-4 py-2 border-b border-gray-300 dark:border-gray-700 flex items-center gap-2">
+                                <div className="flex gap-1.5">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                                    <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                                </div>
+                                <span className="text-xs font-mono text-gray-600 dark:text-gray-400 truncate ml-2">
                                     &gt; {project.path}
                                 </span>
                             </div>
 
-                            {/* Card Content */}
-                            <div className="p-6 font-mono">
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                            <div className="p-6 flex flex-col h-full">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-electric-blue transition-colors">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-gray-400 text-sm mb-6 leading-relaxed h-auto md:h-20">
+                                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed flex-grow">
                                     {project.desc}
                                 </p>
 
-                                {/* Technical Specs */}
-                                <div className="mb-8 bg-[#111]/50 p-4 rounded border border-gray-800">
-                                    <h4 className="text-gray-300 font-bold text-sm mb-2">Technical Specs</h4>
-                                    <div className="space-y-1 text-xs md:text-sm text-gray-400">
-                                        <div>
-                                            <span className="text-cyan-400">&gt;</span> Stack: {project.specs.stack}
-                                        </div>
-                                        <div>
-                                            <span className="text-cyan-400">&gt;</span> Performance Score: <span className="text-green-400">{project.specs.performance}</span>
-                                        </div>
+                                {/* Tags */}
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {project.tags.map((tag, tagIndex) => (
+                                        <span
+                                            key={tagIndex}
+                                            className="px-2.5 py-1 text-xs font-mono bg-gray-100 dark:bg-[#2d2d2d] text-gray-700 dark:text-gray-300 rounded border border-gray-300 dark:border-gray-600 hover:border-electric-blue hover:text-electric-blue transition-colors"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <div className="mb-6 space-y-1 font-mono text-sm">
+                                    <div className="text-gray-900 dark:text-white font-bold mb-2">Technical Specs</div>
+                                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                                        <span className="text-electric-blue">&gt;</span>
+                                        <span>Stack: {project.specs.stack}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                                        <span className="text-electric-blue">&gt;</span>
+                                        <span>Performance Score: {project.specs.performance}</span>
                                     </div>
                                 </div>
 
-                                {/* Buttons */}
-                                <div className="flex flex-col sm:flex-row gap-4">
-                                    {project.live !== '#' && (
-                                        <a
-                                            href={project.live}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex-1 text-center px-4 py-2 border border-gray-600 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 rounded transition-all duration-300 text-xs md:text-sm"
-                                        >
-                                            [ &gt; View Live Demo ]
-                                        </a>
-                                    )}
+                                <div className="flex gap-4 mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+                                    <a
+                                        href={project.live}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors group/link"
+                                    >
+                                        <ExternalLink className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                                        <span>[ &gt; View Live Demo ]</span>
+                                    </a>
                                     <a
                                         href={project.code}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center px-4 py-2 border border-gray-600 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 rounded transition-all duration-300 text-xs md:text-sm"
+                                        className="flex items-center gap-2 text-sm font-mono text-gray-600 dark:text-gray-300 hover:text-electric-blue dark:hover:text-electric-blue transition-colors group/link"
                                     >
-                                        [ &gt; View Source Code ]
+                                        <Github className="w-4 h-4 group-hover/link:rotate-12 transition-transform" />
+                                        <span>[ &gt; View Source Code ]</span>
                                     </a>
                                 </div>
                             </div>

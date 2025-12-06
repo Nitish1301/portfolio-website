@@ -40,8 +40,8 @@ const SystemBoot = ({ onComplete }) => {
         <AnimatePresence>
             {isBooting && (
                 <motion.div
-                    className="fixed inset-0 bg-black z-[10000] flex items-center justify-center font-mono text-green-500 p-8 overflow-hidden"
-                    exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
+                    className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[10000] flex items-center justify-center font-mono text-green-500 p-8 overflow-hidden"
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     <div className="w-full max-w-2xl">

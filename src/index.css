@@ -15,8 +15,7 @@
   }
 
   body {
-    background-color: var(--color-charcoal);
-    color: #ffffff;
+    @apply bg-white text-gray-900 dark:bg-charcoal dark:text-white transition-colors duration-300;
     font-family: var(--font-sans);
     overflow-x: hidden;
   }

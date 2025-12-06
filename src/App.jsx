@@ -1,37 +1,30 @@
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import CustomCursor from './components/CustomCursor';
-import SystemBoot from './components/SystemBoot';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 
+import { ThemeProvider } from './context/ThemeContext';
+
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <main className="bg-[#1a1a1a] min-h-screen text-white cursor-none">
-      <CustomCursor />
-      <SystemBoot onComplete={() => setIsLoading(false)} />
+    <ThemeProvider>
+      <main className="bg-gray-50 dark:bg-[#1a1a1a] min-h-screen text-gray-900 dark:text-white cursor-none relative transition-colors duration-300">
+        <CustomCursor />
 
-      {!isLoading && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="relative z-0">
           <Navbar />
           <Hero />
           <About />
           <Projects />
           <Skills />
           <Contact />
-        </motion.div>
-      )}
-    </main>
+        </div>
+      </main>
+    </ThemeProvider>
   );
 }
 
