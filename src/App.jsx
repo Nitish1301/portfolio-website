@@ -12,7 +12,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <main className="bg-gray-50 dark:bg-[#1a1a1a] min-h-screen text-gray-900 dark:text-white cursor-none relative transition-colors duration-300">
+      <main className="bg-[#1a1a1a] min-h-screen text-white cursor-none relative transition-colors duration-300">
         <CustomCursor />
 
         <div className="relative z-0">

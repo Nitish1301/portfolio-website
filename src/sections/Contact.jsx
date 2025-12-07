@@ -21,17 +21,17 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="relative min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-[#111] py-20 overflow-hidden transition-colors duration-300">
+        <section id="contact" className="relative min-h-screen flex flex-col items-center justify-center bg-[#111] py-20 overflow-hidden transition-colors duration-300">
             <ParticleBackground />
 
             <div className="section-container relative z-10 w-full max-w-4xl">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    className="bg-white dark:bg-[#1e1e1e] rounded-lg border border-gray-300 dark:border-gray-700 shadow-2xl overflow-hidden"
+                    className="bg-[#1e1e1e] rounded-lg border border-gray-700 shadow-2xl overflow-hidden"
                 >
                     {/* Terminal Header */}
-                    <div className="bg-gray-200 dark:bg-[#2d2d2d] px-4 py-2 border-b border-gray-300 dark:border-gray-700 flex items-center gap-2">
+                    <div className="bg-[#2d2d2d] px-4 py-2 border-b border-gray-700 flex items-center gap-2">
                         <span className="text-sm md:text-base font-mono text-gray-600 dark:text-gray-400">
                             &gt; initiate_contact_sequence.sh
                         </span>

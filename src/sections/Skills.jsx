@@ -21,7 +21,7 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="relative py-20 bg-white dark:bg-[#111] transition-colors duration-300 overflow-hidden">
+        <section id="skills" className="relative py-20 bg-[#111] transition-colors duration-300 overflow-hidden">
             <ParticleBackground />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <motion.h2
@@ -30,7 +30,7 @@ const Skills = () => {
                     className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 text-center font-montserrat text-gray-900 dark:text-white"
                 >
                     Skills & <span className="text-electric-blue">Proficiency</span>
-                    <p className="text-lg md:text-xl font-normal text-gray-500 mt-4 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl font-normal text-gray-400 mt-4 max-w-2xl mx-auto">
                         A visual representation of my technical expertise and competitive programming achievements.
                     </p>
                 </motion.h2>
@@ -41,9 +41,9 @@ const Skills = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="bg-gray-50 dark:bg-[#1e1e1e] rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-electric-blue/50 transition-all duration-300"
+                        className="bg-[#1e1e1e] rounded-xl p-8 border border-gray-800 hover:border-electric-blue/50 transition-all duration-300"
                     >
-                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">DSA Progress</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">DSA Progress</h3>
 
                         <div className="mb-8">
                             <CircularProgress
@@ -65,9 +65,9 @@ const Skills = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="bg-gray-50 dark:bg-[#1e1e1e] rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-electric-blue/50 transition-all duration-300 flex flex-col items-center"
+                        className="bg-[#1e1e1e] rounded-xl p-8 border border-gray-800 hover:border-electric-blue/50 transition-all duration-300 flex flex-col items-center"
                     >
-                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Front-End Stack</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">Front-End Stack</h3>
                         <RadarChart data={frontendData} label="Proficiency Matrix" />
                     </motion.div>
 
@@ -76,9 +76,9 @@ const Skills = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="bg-gray-50 dark:bg-[#1e1e1e] rounded-xl p-8 border border-gray-200 dark:border-gray-800 hover:border-electric-blue/50 transition-all duration-300 flex flex-col items-center"
+                        className="bg-[#1e1e1e] rounded-xl p-8 border border-gray-800 hover:border-electric-blue/50 transition-all duration-300 flex flex-col items-center"
                     >
-                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Languages & Tools</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">Languages & Tools</h3>
                         <RadarChart data={toolsData} label="Proficiency Matrix" />
                     </motion.div>
                 </div>

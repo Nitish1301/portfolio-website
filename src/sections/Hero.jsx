@@ -4,7 +4,7 @@ import GlitchText from '../components/GlitchText';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-[#111] overflow-hidden transition-colors duration-300">
+        <section id="home" className="relative min-h-screen flex flex-col items-center justify-center bg-[#111] overflow-hidden transition-colors duration-300">
             <ParticleBackground />
 
             <div className="z-10 w-full max-w-4xl px-4">
@@ -13,12 +13,12 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
                     animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="bg-white/90 dark:bg-[#1e1e1e]/90 backdrop-blur-sm rounded-lg shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-800 font-mono terminal-window transition-colors duration-300"
+                    className="bg-[#1e1e1e]/90 backdrop-blur-sm rounded-lg shadow-2xl overflow-hidden border border-gray-800 font-mono terminal-window transition-colors duration-300"
                 >
                     <div className="crt-overlay absolute inset-0 z-20 pointer-events-none opacity-50 dark:opacity-100"></div>
 
                     {/* Terminal Header */}
-                    <div className="bg-gray-100 dark:bg-[#2d2d2d] px-4 py-2 flex items-center gap-2 border-b border-gray-200 dark:border-gray-700 relative z-30 transition-colors duration-300">
+                    <div className="bg-[#2d2d2d] px-4 py-2 flex items-center gap-2 border-b border-gray-700 relative z-30 transition-colors duration-300">
                         <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
                         <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
                         <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
@@ -27,7 +27,7 @@ const Hero = () => {
                     {/* Terminal Body */}
                     <div className="p-6 md:p-8 flex text-base md:text-lg relative z-10">
                         {/* Line Numbers */}
-                        <div className="flex flex-col text-gray-400 dark:text-gray-600 select-none pr-4 md:pr-6 text-right border-r border-gray-200 dark:border-gray-800 mr-4 md:mr-6 font-mono transition-colors duration-300">
+                        <div className="flex flex-col text-gray-500 select-none pr-4 md:pr-6 text-right border-r border-gray-800 mr-4 md:mr-6 font-mono transition-colors duration-300">
                             {Array.from({ length: 15 }, (_, i) => (
                                 <span key={i + 1} className="leading-relaxed">{String(i + 1).padStart(2, '0')}</span>
                             ))}
@@ -37,11 +37,11 @@ const Hero = () => {
                         <div className="flex-1 font-mono">
                             <div className="mb-4">
                                 <span className="text-green-600 dark:text-green-400 mr-2">&gt;</span>
-                                <span className="text-gray-600 dark:text-gray-300">Hello world.</span>
+                                <span className="text-gray-300">Hello world.</span>
                             </div>
 
                             <div className="mb-4">
-                                <span className="text-gray-900 dark:text-white text-2xl md:text-4xl lg:text-5xl font-bold flex items-center gap-2 transition-colors duration-300">
+                                <span className="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex items-center gap-2 transition-colors duration-300">
                                     I am <GlitchText text="Nitish Gupta" />
                                     <motion.span
                                         animate={{ opacity: [0, 1, 0] }}
@@ -88,14 +88,14 @@ const Hero = () => {
                     transition={{ delay: 0.4, duration: 0.5 }}
                     className="mt-12 flex flex-col sm:flex-row justify-center gap-6"
                 >
-                    <a href="#projects" className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 dark:border-gray-600 hover:border-electric-blue dark:hover:border-cyan-400 text-gray-700 dark:text-gray-300 hover:text-electric-blue dark:hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden text-base md:text-lg">
+                    <a href="#projects" className="group relative px-8 py-4 bg-transparent border-2 border-gray-600 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden text-base md:text-lg">
                         <span className="relative z-10 flex items-center gap-2">
                             [ &gt; View Projects ]
                         </span>
                         <div className="absolute inset-0 bg-electric-blue/10 dark:bg-cyan-400/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     </a>
 
-                    <a href="#about" className="group relative px-8 py-4 bg-transparent border-2 border-gray-400 dark:border-gray-600 hover:border-electric-blue dark:hover:border-cyan-400 text-gray-700 dark:text-gray-300 hover:text-electric-blue dark:hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden text-base md:text-lg">
+                    <a href="#about" className="group relative px-8 py-4 bg-transparent border-2 border-gray-600 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 rounded transition-all duration-300 font-mono overflow-hidden text-base md:text-lg">
                         <span className="relative z-10 flex items-center gap-2">
                             [ &gt; Read Documentation ]
                         </span>

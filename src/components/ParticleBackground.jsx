@@ -39,10 +39,7 @@ const ParticleBackground = () => {
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                // Cyan for dark mode, Slate/Blue for light mode
-                ctx.fillStyle = theme === 'dark'
-                    ? 'rgba(0, 255, 255, 0.5)'
-                    : 'rgba(71, 85, 105, 0.5)';
+                ctx.fillStyle = 'rgba(0, 255, 255, 0.5)';
                 ctx.fill();
             }
         }
@@ -67,9 +64,7 @@ const ParticleBackground = () => {
 
                     if (distance < 100) {
                         ctx.beginPath();
-                        ctx.strokeStyle = theme === 'dark'
-                            ? `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`
-                            : `rgba(71, 85, 105, ${0.1 * (1 - distance / 100)})`;
+                        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
                         ctx.lineWidth = 1;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);

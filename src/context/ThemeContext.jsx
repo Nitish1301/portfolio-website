@@ -7,9 +7,12 @@ export const ThemeProvider = ({ children }) => {
 
     useEffect(() => {
         const root = window.document.documentElement;
-        root.classList.remove('light', 'dark');
-        root.classList.add(theme);
-        localStorage.setItem('theme', theme);
+        // Strictly enforce dark mode
+        if (!root.classList.contains('dark')) {
+            root.classList.add('dark');
+        }
+        root.classList.remove('light');
+        localStorage.setItem('theme', 'dark');
     }, [theme]);
 
     const toggleTheme = () => {
